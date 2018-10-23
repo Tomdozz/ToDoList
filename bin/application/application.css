@@ -1,0 +1,13 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-background-image:url('back.jpeg');
+	-fx-background-size:cover;
+}
+.mainBack{
+	-fx-background-image:url('mainBack.jpg');
+	-fx-background-size:cover;
+}	
+.hoverBtn:hover{
+	-fx-border-width: 2px 2px 2px 2px;
+	-fx-text-fill: black; 
+}

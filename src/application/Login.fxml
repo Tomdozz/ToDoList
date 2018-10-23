@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<!-- <BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+</BorderPane> -->
+
+<BorderPane onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="590.0" prefWidth="772.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <center>
+      <AnchorPane onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="590.0" prefWidth="772.0" stylesheets="@application.css">
+         <children>
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder; -fx-font-size: 2.4em; -fx-fill: white;" text="Go Explore!">
+                     <effect>
+                        <DropShadow color="#00000062" />
+                     </effect>
+                  </Text>
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="signUpBtn" mnemonicParsing="false" onAction="#signupScreen" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" text="Signup">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="signInBtn" mnemonicParsing="false" onAction="#logInScreen" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" text="Sign in">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#exit" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 2px 2px 0px 0px;" text="X">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox fx:id="loginScreen" alignment="CENTER" layoutX="261.0" layoutY="195.0" prefHeight="200.0" prefWidth="250.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="44.0" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;">
+                     <children>
+                        <TextField id="username" fx:id="username" promptText="username" style="-fx-background-color: transparent; -fx-prompt-text-fill: white;" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="44.0" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;">
+                     <children>
+                        <TextField id="password" fx:id="password" promptText="password" style="-fx-background-color: transparent; -fx-prompt-text-fill: white;" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Text fx:id="errText" fill="#950000" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Button mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="267.0" style="-fx-background-color: #2f2f2fa3; -fx-background-radius: 100; -fx-text-fill: white;" text="Go explore">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox fx:id="signupScreen" alignment="CENTER" layoutX="261.0" layoutY="194.0" prefHeight="200.0" prefWidth="250.0" visible="false">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="44.0" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;">
+                     <children>
+                        <TextField id="username" fx:id="usernameSignUp" promptText="username" style="-fx-background-color: transparent; -fx-prompt-text-fill: white;" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="44.0" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;">
+                     <children>
+                        <TextField id="password" fx:id="passwordSignUp" promptText="password" style="-fx-background-color: transparent; -fx-prompt-text-fill: white;" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="44.0" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;">
+                     <children>
+                        <TextField id="email" fx:id="emailSignUp" promptText="email" style="-fx-background-color: transparent; -fx-prompt-text-fill: white;" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Text fx:id="errTextSignup" fill="#950000" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Button mnemonicParsing="false" onAction="#signUp" prefHeight="25.0" prefWidth="267.0" style="-fx-background-color: #2f2f2fa3; -fx-background-radius: 100; -fx-text-fill: white;" text="Sign Up!">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutX="194.0" layoutY="476.0" prefHeight="25.0" prefWidth="772.0" style="-fx-background-color: #2f2f2fa3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Go explore company ©" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
