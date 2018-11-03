@@ -1,4 +1,4 @@
-package application;
+package application.database;
 
 public class User {
 	public int id;

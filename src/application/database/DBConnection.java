@@ -4,12 +4,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import static application.database.StaticVariables.*;
+
 //static connection to use always
 public class DBConnection {
 
-	private static final String USERNAME = "root";
-	private static final String PASSWORD = "";
-	private static final String DBCONN = "jdbc:mysql://localhost/go_explore";
+	private static final String USERNAME = DB_USR;
+	private static final String PASSWORD = DB_PASS;
+	private static final String DBCONN = DB_CONN;
 	
 	public static Connection getConnection() throws SQLException {
 		try {

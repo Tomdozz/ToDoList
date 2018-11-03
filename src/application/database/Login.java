@@ -4,9 +4,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import application.*;
 
-public class Login {
+public class  Login {
 
 	public static User getUser(String username, String password) {
 		String query = "SELECT * FROM `members` WHERE `username` = '" + username + "' AND `password` = '" + password

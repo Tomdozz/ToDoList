@@ -88,7 +88,7 @@
                         </Text>
                         <HBox>
                            <children>
-                              <Button mnemonicParsing="false" opacity="0.81" prefHeight="41.0" prefWidth="50.0" style="-fx-background-color: #ff503d;">
+                              <Button mnemonicParsing="false" onAction="#pickLabel" onMouseEntered="#opacityLabelButton" opacity="0.81" prefHeight="41.0" prefWidth="50.0" style="-fx-background-color: #ff503d;">
                                  <HBox.margin>
                                     <Insets bottom="5.0" right="10.0" />
                                  </HBox.margin>
