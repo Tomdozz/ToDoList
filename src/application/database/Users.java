@@ -18,9 +18,9 @@ public class Users extends DatabaseObject {
         *
          */
         updateTableName(this.getClass().getSimpleName());
-        addVarcharFeild(FEILD_EMAIL, false);
-        addVarcharFeild(FEILD_USERNAME, false);
-        addVarcharFeild(FEILD_PASSWORD, true);//remove bool and add ending in build instead
+        addVarcharFeild(FEILD_EMAIL);
+        addVarcharFeild(FEILD_USERNAME);
+        addVarcharFeild(FEILD_PASSWORD);//remove bool and add ending in build instead
         build();
     }
 

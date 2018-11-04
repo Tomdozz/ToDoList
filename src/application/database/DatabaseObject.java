@@ -19,11 +19,11 @@ public abstract class DatabaseObject {
         query = "SELECT * FROM '" + tableName + "'";
     }
 
-    void addVarcharFeild(String feildName, boolean lastFeild) {
+    void addVarcharFeild(String feildName) {
             tableBuild.append(",`" + feildName + "`VARCHAR(255) NOT NULL");
     }
 
-    void addIntFeild(String feildName, boolean lastFeild) {
+    void addIntFeild(String feildName) {
             tableBuild.append(",`" + feildName + "`INT NOT NULL");
     }
 
