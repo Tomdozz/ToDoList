@@ -14,6 +14,9 @@ public class Users extends DatabaseObject {
      */
     @Override
     public void buildTable() {
+        /*
+        *
+         */
         updateTableName(this.getClass().getSimpleName());
         addVarcharFeild(FEILD_EMAIL, false);
         addVarcharFeild(FEILD_USERNAME, false);

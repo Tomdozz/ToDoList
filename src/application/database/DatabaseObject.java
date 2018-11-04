@@ -20,23 +20,16 @@ public abstract class DatabaseObject {
     }
 
     void addVarcharFeild(String feildName, boolean lastFeild) {
-        if (lastFeild) {
-            tableBuild.append(",`" + feildName + "`VARCHAR(255) NOT NULL,PRIMARY KEY (`ID`));");
-        } else {
             tableBuild.append(",`" + feildName + "`VARCHAR(255) NOT NULL");
-        }
     }
 
     void addIntFeild(String feildName, boolean lastFeild) {
-        if (lastFeild) {
-            tableBuild.append(",`" + feildName + "`INT NOT NULL,PRIMARY KEY (`ID`));");
-        } else {
             tableBuild.append(",`" + feildName + "`INT NOT NULL");
-        }
     }
 
     void build() {
         if (!exists()) {
+            tableBuild.append(",PRIMARY KEY (`ID`));");
             try (Connection connection = DBConnection.getConnection();
                  Statement stmt = connection.createStatement();) {
                 System.out.println(tableBuild.toString());
