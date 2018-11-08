@@ -9,13 +9,13 @@ public class Users extends DatabaseObject {
     private static final String FEILD_PASSWORD = "PASSWORD";
     private static final String FEILD_USERNAME = "USERNAME";
 
-    /*
-     *Find a cool way or representing a entry in this table
-     */
     @Override
     public void buildTable() {
         /*
-        *
+         *Has to be done in these steps(databaseObject class will handle the rest)
+         * 1.update name
+         * 2.add feilds
+         * 3.build
          */
         updateTableName(this.getClass().getSimpleName());
         addVarcharFeild(FEILD_EMAIL);
@@ -25,25 +25,17 @@ public class Users extends DatabaseObject {
     }
 
     @Override
-    public void add() {
+    public void setObject(DatabaseEntry user) {
 
     }
 
     @Override
-    public void remove() {
+    public void remove(DatabaseEntry user) {
 
     }
 
-    public class User {
-        public int id;
-        public String username;
-        public String password;
-        public String email;
-
-        public User(String username, String password, String email) {
-            this.email = email;
-            this.password = password;
-            this.username = username;
-        }
+    @Override
+    public DatabaseEntry getObject() {
+        return null;
     }
 }

@@ -6,25 +6,26 @@ import static application.database.StaticVariables.DB_NAME;
 
 public abstract class DatabaseObject {
     String tableName;
-    String query = "SELECT * FROM '" + tableName + "'";
+    StringBuilder query = new StringBuilder("SELECT * FROM '" + tableName + "'");
     StringBuilder tableBuild = new StringBuilder("CREATE TABLE `" + DB_NAME + "`.`" + tableName + "`( `ID` INT NOT NULL AUTO_INCREMENT");
 
-    public String getQuery() {
+    public StringBuilder getQuery() {
         return query;
     }
+
 
     public void updateTableName(String tableName) {
         this.tableName = tableName;
         tableBuild = new StringBuilder("CREATE TABLE `" + DB_NAME + "`.`" + tableName + "`( `ID` INT NOT NULL AUTO_INCREMENT");
-        query = "SELECT * FROM '" + tableName + "'";
+        query = new StringBuilder("SELECT * FROM '" + tableName + "'");
     }
 
     void addVarcharFeild(String feildName) {
-            tableBuild.append(",`" + feildName + "`VARCHAR(255) NOT NULL");
+        tableBuild.append(",`" + feildName + "`VARCHAR(255) NOT NULL");
     }
 
     void addIntFeild(String feildName) {
-            tableBuild.append(",`" + feildName + "`INT NOT NULL");
+        tableBuild.append(",`" + feildName + "`INT NOT NULL");
     }
 
     void build() {
@@ -54,7 +55,14 @@ public abstract class DatabaseObject {
         }
         return false;
     }
+
+
     public abstract void buildTable();
-    public abstract void add();
-    public abstract void remove();
+
+    public abstract void setObject(DatabaseEntry databaseEntry);
+
+    public abstract void remove(DatabaseEntry databaseEntry);
+
+    @Deprecated
+    public abstract DatabaseEntry getObject();
 }
