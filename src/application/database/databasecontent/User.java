@@ -1,4 +1,6 @@
-package application.database;
+package application.database.databasecontent;
+
+import application.database.DatabaseEntry;
 
 public class User extends DatabaseEntry {
 

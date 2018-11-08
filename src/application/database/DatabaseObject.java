@@ -20,15 +20,15 @@ public abstract class DatabaseObject {
         query = new StringBuilder("SELECT * FROM '" + tableName + "'");
     }
 
-    void addVarcharFeild(String feildName) {
+    protected void addVarcharFeild(String feildName) {
         tableBuild.append(",`" + feildName + "`VARCHAR(255) NOT NULL");
     }
 
-    void addIntFeild(String feildName) {
+    protected void addIntFeild(String feildName) {
         tableBuild.append(",`" + feildName + "`INT NOT NULL");
     }
 
-    void build() {
+    protected void build() {
         if (!exists()) {
             tableBuild.append(",PRIMARY KEY (`ID`));");
             try (Connection connection = DBConnection.getConnection();

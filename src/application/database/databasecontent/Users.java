@@ -1,4 +1,7 @@
-package application.database;
+package application.database.databasecontent;
+
+import application.database.DatabaseEntry;
+import application.database.DatabaseObject;
 
 import java.sql.Connection;
 import java.sql.SQLException;

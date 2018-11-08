@@ -11,7 +11,7 @@ public class DBConnection {
 
 	private static final String USERNAME = DB_USR;
 	private static final String PASSWORD = DB_PASS;
-	private static final String DBCONN = DB_CONN;
+	private static final String DBCONN = DB_CONN.toString();
 	
 	public static Connection getConnection() throws SQLException {
 		try {
