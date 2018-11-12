@@ -61,7 +61,6 @@ public class DatabaseController {
             }
         }
     }
-
     boolean exists() {
         try (Connection connection = DBConnection.getConnection();
         ) {
@@ -69,7 +68,6 @@ public class DatabaseController {
             ResultSet result = dbm.getCatalogs();
             while (result.next()) {
                 String catalogs = result.getString(1);
-
                 if (DB_NAME.equals(catalogs)) {
                     return true;
                 }
