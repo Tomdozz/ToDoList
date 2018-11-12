@@ -14,6 +14,7 @@ public class DatabaseController {
     ArrayList<DatabaseEntry> dbEntries = new ArrayList<>();
     String query ="CREATE DATABASE " +DB_NAME;
 
+    //https://docs.oracle.com/javafx/2/layout/builtin_layouts.htm
     public void run() {
         createDBIfNotExsist();
         registerDbObjects();
